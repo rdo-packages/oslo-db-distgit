@@ -3,7 +3,7 @@
 
 Name:           python-oslo-db
 Version:        0.3.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -41,10 +41,9 @@ BuildRequires:  python-oslo-sphinx
 %description doc
 Documentation for the Oslo database handling library.
 
+
 %prep
 %setup -q -n %{pypi_name}-%{version}
-# Remove bundled egg-info
-rm -rf %{pypi_name}.egg-info
 # Let RPM handle the dependencies
 rm -f requirements.txt
 # make doc build compatible with python-oslo-sphinx RPM
@@ -74,5 +73,8 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Wed Aug 06 2014 Alan Pevec <apevec@redhat.com> - 0.3.0-2
+- rebuild with original egginfo, pbr cannot regenerate SOURCES.txt without git
+
 * Thu Jul 31 2014 Alan Pevec <apevec@redhat.com> - 0.3.0-1
 - Initial package.
