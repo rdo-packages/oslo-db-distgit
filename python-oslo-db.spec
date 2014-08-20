@@ -2,8 +2,8 @@
 %global pypi_name oslo.db
 
 Name:           python-oslo-db
-Version:        0.3.0
-Release:        2%{?dist}
+Version:        0.4.0
+Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -73,6 +73,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Wed Aug 20 2014 Alan Pevec <apevec@redhat.com> - 0.4.0-1
+- update to 0.4.0
+
 * Wed Aug 06 2014 Alan Pevec <apevec@redhat.com> - 0.3.0-2
 - rebuild with original egginfo, pbr cannot regenerate SOURCES.txt without git
 
