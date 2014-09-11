@@ -3,7 +3,7 @@
 
 Name:           python-oslo-db
 Version:        0.4.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -14,13 +14,15 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
-Requires:       python-oslo-config
-Requires:       python-alembic
+Requires:       python-oslo-config >= 1:1.4.0.0
+Requires:       python-oslo-i18n
+Requires:       python-oslo-utils
+Requires:       python-alembic >= 0.6.4
 Requires:       python-babel
 Requires:       python-iso8601
-Requires:       python-sqlalchemy
-Requires:       python-migrate
-Requires:       python-stevedore
+Requires:       python-sqlalchemy >= 0.8.4
+Requires:       python-migrate >= 0.9.1
+Requires:       python-stevedore >= 0.14
 
 
 %description
@@ -73,6 +75,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Thu Sep 11 2014 Alan Pevec <apevec@redhat.com> - 0.4.0-2
+- update dependencies
+
 * Wed Aug 20 2014 Alan Pevec <apevec@redhat.com> - 0.4.0-1
 - update to 0.4.0
 
