@@ -2,7 +2,7 @@
 %global pypi_name oslo.db
 
 Name:           python-oslo-db
-Version:        1.0.1
+Version:        1.0.2
 Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
@@ -75,6 +75,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Thu Oct 02 2014 Alan Pevec <alan.pevec@redhat.com> 1.0.2-1
+- Update to upstream 1.0.2
+
 * Sat Sep 20 2014 Alan Pevec <apevec@redhat.com> - 1.0.1-1
 - Update to upstream 1.0.1
 
