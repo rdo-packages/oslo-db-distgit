@@ -9,6 +9,9 @@ Summary:        OpenStack oslo.db library
 License:        ASL 2.0
 URL:            http://launchpad.net/oslo
 Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+#
+# patches_base=
+#
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
