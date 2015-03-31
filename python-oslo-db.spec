@@ -2,32 +2,29 @@
 %global pypi_name oslo.db
 
 Name:           python-oslo-db
-Version:        1.0.2
-Release:        2%{?dist}
+Version:        1.7.1
+Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
 URL:            http://launchpad.net/oslo
 Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
-#
-# patches_base=
-#
-Patch0001: 0001-Ensure-create_engine-retries-the-initial-connection-.patch
 
 BuildArch:      noarch
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
-Requires:       python-oslo-config >= 1:1.4.0.0
+Requires:       python-oslo-config >= 1:1.9.3
 Requires:       python-oslo-i18n
 Requires:       python-oslo-utils
-Requires:       python-alembic >= 0.6.4
+Requires:       python-alembic >= 0.7.2
 Requires:       python-babel
 Requires:       python-iso8601
-Requires:       python-sqlalchemy >= 0.8.4
-Requires:       python-migrate >= 0.9.1
-Requires:       python-stevedore >= 0.14
+Requires:       python-sqlalchemy >= 0.9.7
+Requires:       python-migrate >= 0.9.5
+Requires:       python-stevedore >= 1.3.0
+Requires:       python-six >= 1.9.0
 
 
 %description
@@ -43,7 +40,7 @@ Summary:    Documentation for the Oslo database handling library
 Group:      Documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-oslo-sphinx >= 2.5.0
 
 %description doc
 Documentation for the Oslo database handling library.
@@ -52,12 +49,8 @@ Documentation for the Oslo database handling library.
 %prep
 %setup -q -n %{pypi_name}-%{version}
 
-%patch0001 -p1
-
 # Let RPM handle the dependencies
 rm -f requirements.txt
-# make doc build compatible with python-oslo-sphinx RPM
-sed -i 's/oslosphinx/oslo.sphinx/' doc/source/conf.py
 
 
 %build
@@ -76,6 +69,7 @@ rm -rf html/.{doctrees,buildinfo}
 %files
 %doc README.rst LICENSE
 %{python2_sitelib}/oslo
+%{python2_sitelib}/oslo_db
 %{python2_sitelib}/*.egg-info
 %{python2_sitelib}/*-nspkg.pth
 
@@ -83,6 +77,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Tue Mar 31 2015 Alan Pevec <alan.pevec@redhat.com> 1.7.1-1
+- Update to 1.7.1
+
 * Tue Oct 07 2014 Alan Pevec <alan.pevec@redhat.com> 1.0.2-2
 - keep trying to connect to the database on startup rhbz#1144181
 
