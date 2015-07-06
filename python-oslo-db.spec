@@ -2,8 +2,8 @@
 %global pypi_name oslo.db
 
 Name:           python-oslo-db
-Version:        1.7.1
-Release:        2%{?dist}
+Version:        1.7.2
+Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -16,8 +16,8 @@ BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
 Requires:       python-oslo-config >= 1:1.9.3
-Requires:       python-oslo-i18n
-Requires:       python-oslo-utils
+Requires:       python-oslo-i18n >= 1.5.0
+Requires:       python-oslo-utils >= 1.4.0
 Requires:       python-alembic >= 0.7.2
 Requires:       python-babel
 Requires:       python-iso8601
@@ -77,6 +77,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Tue Jul 07 2015 Alan Pevec <alan.pevec@redhat.com> 1.7.2-1
+- Update to upstream 1.7.2
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.7.1-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
