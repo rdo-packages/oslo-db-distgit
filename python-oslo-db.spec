@@ -2,7 +2,7 @@
 %global pypi_name oslo.db
 
 Name:           python-oslo-db
-Version:        1.7.2
+Version:        2.3.0
 Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
@@ -40,7 +40,15 @@ Summary:    Documentation for the Oslo database handling library
 Group:      Documentation
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx >= 2.5.0
+BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-oslo-utils
+BuildRequires:  python-oslo-config
+BuildRequires:  python-six
+BuildRequires:  python-alembic
+BuildRequires:  python-fixtures
+BuildRequires:  python-migrate
+BuildRequires:  python-testresources
+BuildRequires:  python-testscenarios
 
 %description doc
 Documentation for the Oslo database handling library.
@@ -68,15 +76,16 @@ rm -rf html/.{doctrees,buildinfo}
 
 %files
 %doc README.rst LICENSE
-%{python2_sitelib}/oslo
 %{python2_sitelib}/oslo_db
 %{python2_sitelib}/*.egg-info
-%{python2_sitelib}/*-nspkg.pth
 
 %files doc
 %doc html LICENSE
 
 %changelog
+* Mon Aug 17 2015 Alan Pevec <alan.pevec@redhat.com> 2.3.0-1
+- Update to upstream 2.3.0
+
 * Tue Jul 07 2015 Alan Pevec <alan.pevec@redhat.com> 1.7.2-1
 - Update to upstream 1.7.2
 
