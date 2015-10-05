@@ -3,7 +3,7 @@
 
 Name:           python-oslo-db
 Version:        2.6.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -15,6 +15,7 @@ BuildArch:      noarch
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 
+Requires:       MySQL-python
 Requires:       python-oslo-config >= 2:2.3.0
 Requires:       python-oslo-context >= 0.2.0
 Requires:       python-oslo-i18n >= 1.5.0
@@ -84,6 +85,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Mon Nov 09 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-2
+- Add MySQL-python dependency (Ihar Hrachyshka)
+
 * Thu Sep 17 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-1
 - Update to upstream 2.6.0
 
