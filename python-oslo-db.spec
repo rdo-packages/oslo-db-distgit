@@ -3,7 +3,7 @@
 
 Name:           python-oslo-db
 Version:        2.6.0
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -86,6 +86,9 @@ rm -rf html/.{doctrees,buildinfo}
 %doc html LICENSE
 
 %changelog
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 2.6.0-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Fri Nov 13 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-3
 - Add python-PyMySQL to requirements (Javier Pena)
 
