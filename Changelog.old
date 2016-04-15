@@ -1,0 +1,50 @@
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 2.6.0-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
+* Fri Nov 13 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-3
+- Add python-PyMySQL to requirements (Javier Pena)
+
+* Mon Nov 09 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-2
+- Add MySQL-python dependency (Ihar Hrachyshka)
+
+* Thu Sep 17 2015 Alan Pevec <alan.pevec@redhat.com> 2.6.0-1
+- Update to upstream 2.6.0
+
+* Thu Sep 03 2015 Alan Pevec <alan.pevec@redhat.com> 2.4.1-1
+- Update to upstream 2.4.1
+
+* Mon Aug 17 2015 Alan Pevec <alan.pevec@redhat.com> 2.3.0-1
+- Update to upstream 2.3.0
+
+* Tue Jul 07 2015 Alan Pevec <alan.pevec@redhat.com> 1.7.2-1
+- Update to upstream 1.7.2
+
+* Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.7.1-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
+
+* Tue Mar 31 2015 Alan Pevec <alan.pevec@redhat.com> 1.7.1-1
+- Update to 1.7.1
+
+* Tue Oct 07 2014 Alan Pevec <alan.pevec@redhat.com> 1.0.2-2
+- keep trying to connect to the database on startup rhbz#1144181
+
+* Thu Oct 02 2014 Alan Pevec <alan.pevec@redhat.com> 1.0.2-1
+- Update to upstream 1.0.2
+
+* Sat Sep 20 2014 Alan Pevec <apevec@redhat.com> - 1.0.1-1
+- Update to upstream 1.0.1
+
+* Wed Sep 17 2014 Alan Pevec <apevec@redhat.com> - 0.5.0-1
+- Update to upstream 0.5.0
+
+* Thu Sep 11 2014 Alan Pevec <apevec@redhat.com> - 0.4.0-2
+- update dependencies
+
+* Wed Aug 20 2014 Alan Pevec <apevec@redhat.com> - 0.4.0-1
+- update to 0.4.0
+
+* Wed Aug 06 2014 Alan Pevec <apevec@redhat.com> - 0.3.0-2
+- rebuild with original egginfo, pbr cannot regenerate SOURCES.txt without git
+
+* Thu Jul 31 2014 Alan Pevec <apevec@redhat.com> - 0.3.0-1
+- Initial package.
