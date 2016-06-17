@@ -39,6 +39,8 @@ BuildRequires:  python-testscenarios
 BuildRequires:  python-oslotest
 BuildRequires:  python-oslo-context
 BuildRequires:  python-psycopg2
+# Required to compile translation files
+BuildRequires:  python-babel
 
 Requires:       MySQL-python
 Requires:       python-PyMySQL
@@ -54,6 +56,7 @@ Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 0.9.9
 Requires:       python-stevedore >= 1.5.0
 Requires:       python-pbr
+Requires:       python-%{pkg_name}-lang >= %{version}-%{release}
 
 %description -n python2-%{pkg_name}
 The OpenStack Oslo database handling library. Provides database connectivity
@@ -122,11 +125,18 @@ Requires:       python3-six >= 1.9.0
 Requires:       python3-sqlalchemy >= 0.9.9
 Requires:       python3-stevedore >= 1.5.0
 Requires:       python3-pbr
+Requires:       python-%{pkg_name}-lang >= %{version}-%{release}
 
 %description -n python3-%{pkg_name}
 The OpenStack Oslo database handling library. Provides database connectivity
 to the different backends and helper utils.
 %endif
+
+%package  -n python-%{pkg_name}-lang
+Summary:   Translation files for Oslo db library
+
+%description -n python-%{pkg_name}-lang
+Translation files for Oslo db library
 
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
@@ -141,6 +151,8 @@ rm -f requirements.txt
 sphinx-build doc/source html
 # remove the sphinx-build leftovers
 rm -rf html/.{doctrees,buildinfo}
+# Generate i18n files
+%{__python2} setup.py compile_catalog -d build/lib/oslo_db/locale
 
 %if 0%{?with_python3}
 %py3_build
@@ -152,6 +164,18 @@ rm -rf html/.{doctrees,buildinfo}
 %if 0%{?with_python3}
 %py3_install
 %endif
+
+# Install i18n .mo files (.po and .pot are not required)
+install -d -m 755 %{buildroot}%{_datadir}
+rm -f %{buildroot}%{python2_sitelib}/oslo_db/locale/*/LC_*/oslo_db*po
+rm -f %{buildroot}%{python2_sitelib}/oslo_db/locale/*pot
+mv %{buildroot}%{python2_sitelib}/oslo_db/locale %{buildroot}%{_datadir}/locale
+%if 0%{?with_python3}
+rm -rf %{buildroot}%{python3_sitelib}/oslo_db/locale
+%endif
+
+# Find language files
+%find_lang oslo_db --all-name
 
 %check
 %{__python2} setup.py test
@@ -173,6 +197,8 @@ rm -rf .testrepository
 
 %files -n python-%{pkg_name}-tests
 %{python2_sitelib}/oslo_db/tests
+
+%files -n python-%{pkg_name}-lang -f oslo_db.lang
 
 %if 0%{?with_python3}
 %files -n python3-%{pkg_name}
