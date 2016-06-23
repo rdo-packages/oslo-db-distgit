@@ -9,7 +9,7 @@
 
 Name:           python-%{pkg_name}
 Version:        4.6.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -130,6 +130,27 @@ The OpenStack Oslo database handling library. Provides database connectivity
 to the different backends and helper utils.
 %endif
 
+%if 0%{?with_python3}
+%package -n python3-%{pkg_name}-tests
+Summary:    test subpackage for the Oslo database handling library
+
+Requires:  python3-%{pkg_name} = %{version}-%{release}
+Requires:  python3-oslo-utils
+Requires:  python3-oslo-config
+Requires:  python3-six
+Requires:  python3-alembic
+Requires:  python3-fixtures
+Requires:  python3-migrate
+Requires:  python3-testresources
+Requires:  python3-testscenarios
+Requires:  python3-oslotest
+Requires:  python3-oslo-context
+Requires:  python3-psycopg2
+
+%description -n python3-%{pkg_name}-tests
+Test subpackage for the Oslo database handling library.
+%endif
+
 %prep
 %setup -q -n %{pypi_name}-%{upstream_version}
 
@@ -185,7 +206,15 @@ rm -rf .testrepository
 %exclude %{python3_sitelib}/oslo_db/tests
 %endif
 
+%if 0%{?with_python3}
+%files -n python3-%{pkg_name}-tests
+%{python3_sitelib}/oslo_db/tests
+%endif
+
 %changelog
-* Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 4.6.0-
+* Fri Jun 03 2016 Charalampos Stratakis <cstratak@redhat.com> 4.6.0-2
+- Provide a python 3 tests subpackage
+
+* Wed Mar 23 2016 Haikel Guemar <hguemar@fedoraproject.org> 4.6.0-1
 - Update to 4.6.0
 
