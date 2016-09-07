@@ -8,13 +8,13 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 Name:           python-%{pkg_name}
-Version:        4.6.0
-Release:        2%{?dist}
+Version:        4.7.1
+Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
 URL:            http://launchpad.net/oslo
-Source0:        https://pypi.python.org/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
+Source0:        https://pypi.io/packages/source/o/%{pypi_name}/%{pypi_name}-%{version}.tar.gz
 
 BuildArch:      noarch
 
@@ -44,16 +44,16 @@ BuildRequires:  python-psycopg2
 
 Requires:       MySQL-python
 Requires:       python-PyMySQL
-Requires:       python-oslo-config >= 2:2.3.0
+Requires:       python-oslo-config >= 2:3.7.0
 Requires:       python-oslo-context >= 0.2.0
-Requires:       python-oslo-i18n >= 1.5.0
-Requires:       python-oslo-utils >= 2.0.0
+Requires:       python-oslo-i18n >= 2.1.0
+Requires:       python-oslo-utils >= 3.5.0
 Requires:       python-alembic >= 0.8.0
 Requires:       python-babel
 Requires:       python-iso8601
 Requires:       python-migrate >= 0.9.6
 Requires:       python-six >= 1.9.0
-Requires:       python-sqlalchemy >= 0.9.9
+Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-stevedore >= 1.5.0
 Requires:       python-pbr
 
@@ -112,16 +112,16 @@ BuildRequires:  python3-psycopg2
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
-Requires:       python3-oslo-config >= 2:2.3.0
+Requires:       python3-oslo-config >= 2:3.7.0
 Requires:       python3-oslo-context >= 0.2.0
-Requires:       python3-oslo-i18n >= 1.5.0
-Requires:       python3-oslo-utils >= 2.0.0
+Requires:       python3-oslo-i18n >= 2.1.0
+Requires:       python3-oslo-utils >= 3.5.0
 Requires:       python3-alembic >= 0.8.0
 Requires:       python3-babel
 Requires:       python3-iso8601
 Requires:       python3-migrate >= 0.9.6
 Requires:       python3-six >= 1.9.0
-Requires:       python3-sqlalchemy >= 0.9.9
+Requires:       python3-sqlalchemy >= 1.0.10
 Requires:       python3-stevedore >= 1.5.0
 Requires:       python3-pbr
 
@@ -212,6 +212,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Thu Sep 08 2016 Haikel Guemar <hguemar@fedoraproject.org> 4.7.1-1
+- Update to 4.7.1
+
 * Fri Jun 03 2016 Charalampos Stratakis <cstratak@redhat.com> 4.6.0-2
 - Provide a python 3 tests subpackage
 
