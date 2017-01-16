@@ -7,7 +7,7 @@
 %endif
 
 Name:           python-%{pkg_name}
-Version:        4.13.4
+Version:        4.13.5
 Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
@@ -212,6 +212,9 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Mon Jan 16 2017 Alan Pevec <alan.pevec@redhat.com> 4.13.5-1
+- Update to 4.13.5
+
 * Mon Dec 05 2016 Alfredo Moralejo <amoralej@redhat.com> 4.13.4-1
 - Update to 4.13.4
 
