@@ -28,6 +28,7 @@ Summary:        OpenStack oslo.db library
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
+BuildRequires:  git
 # test requirements
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-config
@@ -69,7 +70,7 @@ to the different backends and helper utils.
 Summary:    Documentation for the Oslo database handling library
 
 BuildRequires:  python-sphinx
-BuildRequires:  python-oslo-sphinx
+BuildRequires:  python-openstackdocstheme
 
 %description -n python-%{pkg_name}-doc
 Documentation for the Oslo database handling library.
@@ -142,7 +143,7 @@ Summary:   Translation files for Oslo db library
 Translation files for Oslo db library
 
 %prep
-%setup -q -n %{pypi_name}-%{upstream_version}
+%autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # Let RPM handle the dependencies
 rm -f requirements.txt
@@ -151,9 +152,9 @@ rm -f requirements.txt
 %py2_build
 
 # generate html docs
-sphinx-build doc/source html
+%{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
-rm -rf html/.{doctrees,buildinfo}
+rm -rf doc/build/html/.{doctrees,buildinfo}
 # Generate i18n files
 %{__python2} setup.py compile_catalog -d build/lib/oslo_db/locale
 
@@ -195,7 +196,7 @@ rm -rf .testrepository
 %exclude %{python2_sitelib}/oslo_db/tests
 
 %files -n python-%{pkg_name}-doc
-%doc html
+%doc doc/build/html
 %license LICENSE
 
 %files -n python-%{pkg_name}-tests
