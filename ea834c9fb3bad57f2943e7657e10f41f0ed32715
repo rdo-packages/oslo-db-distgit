@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "5a890539_b07376e6",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 119,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2017-08-04T10:55:09Z",
+      "side": 1,
+      "message": "3.20.0",
+      "range": {
+        "startLine": 119,
+        "startChar": 38,
+        "endLine": 119,
+        "endChar": 44
+      },
+      "revId": "ea834c9fb3bad57f2943e7657e10f41f0ed32715",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
