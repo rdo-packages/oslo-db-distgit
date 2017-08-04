@@ -46,17 +46,16 @@ BuildRequires:  python-babel
 
 Requires:       MySQL-python
 Requires:       python-PyMySQL
-Requires:       python-oslo-config >= 2:3.14.0
-Requires:       python-oslo-context >= 2.9.0
+Requires:       python-oslo-config >= 4.0.0
 Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-utils >= 3.18.0
+Requires:       python-oslo-utils >= 3.20.0
 Requires:       python-alembic >= 0.8.7
 Requires:       python-babel
 Requires:       python-iso8601
-Requires:       python-migrate >= 0.9.6
+Requires:       python-migrate >= 0.11.0
 Requires:       python-six >= 1.9.0
 Requires:       python-sqlalchemy >= 1.0.10
-Requires:       python-stevedore >= 1.17.1
+Requires:       python-stevedore >= 1.20.0
 Requires:       python-pbr
 Requires:       python-debtcollector >= 1.2.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
@@ -84,11 +83,10 @@ Requires:  python-oslo-config
 Requires:  python-six
 Requires:  python-alembic
 Requires:  python-fixtures
-Requires:  python-migrate
+Requires:  python-migrate >= 0.11.0
 Requires:  python-testresources
 Requires:  python-testscenarios
 Requires:  python-oslotest
-Requires:  python-oslo-context
 Requires:  python-psycopg2
 
 %description -n python-%{pkg_name}-tests
@@ -117,7 +115,6 @@ BuildRequires:  python3-psycopg2
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
 Requires:       python3-oslo-config >= 2:3.14.0
-Requires:       python3-oslo-context >= 2.9.0
 Requires:       python3-oslo-i18n >= 2.1.0
 Requires:       python3-oslo-utils >= 3.18.0
 Requires:       python3-alembic >= 0.8.7
@@ -126,7 +123,7 @@ Requires:       python3-iso8601
 Requires:       python3-migrate >= 0.9.6
 Requires:       python3-six >= 1.9.0
 Requires:       python3-sqlalchemy >= 1.0.10
-Requires:       python3-stevedore >= 1.17.1
+Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
