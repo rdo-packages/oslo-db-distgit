@@ -1,4 +1,5 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
+%global with_doc 1
 %global pypi_name oslo.db
 %global pkg_name oslo-db
 
@@ -66,7 +67,7 @@ Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 %description -n python2-%{pkg_name}
 %{common_desc}
 
-
+%if 0%{?with_doc}
 %package -n python-%{pkg_name}-doc
 Summary:    Documentation for the Oslo database handling library
 
@@ -77,6 +78,7 @@ BuildRequires:  python-openstackdocstheme
 %{common_desc}
 
 Documentation for the Oslo database handling library.
+%endif
 
 %package -n python-%{pkg_name}-tests
 Summary:    test subpackage for the Oslo database handling library
@@ -155,10 +157,13 @@ rm -f requirements.txt
 %build
 %py2_build
 
+%if 0%{?with_doc}
 # generate html docs
 %{__python2} setup.py build_sphinx -b html
 # remove the sphinx-build leftovers
 rm -rf doc/build/html/.{doctrees,buildinfo}
+%endif
+
 # Generate i18n files
 %{__python2} setup.py compile_catalog -d build/lib/oslo_db/locale
 
@@ -199,9 +204,11 @@ rm -rf .testrepository
 %{python2_sitelib}/*.egg-info
 %exclude %{python2_sitelib}/oslo_db/tests
 
+%if 0%{?with_doc}
 %files -n python-%{pkg_name}-doc
 %doc doc/build/html
 %license LICENSE
+%endif
 
 %files -n python-%{pkg_name}-tests
 %{python2_sitelib}/oslo_db/tests
