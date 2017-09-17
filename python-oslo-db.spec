@@ -119,6 +119,7 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-context
 BuildRequires:  python3-psycopg2
+BuildRequires:  openstack-macros
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
@@ -152,7 +153,7 @@ Translation files for Oslo db library
 %autosetup -n %{pypi_name}-%{upstream_version} -S git
 
 # Let RPM handle the dependencies
-rm -f requirements.txt
+%py_req_cleanup
 
 %build
 %py2_build
