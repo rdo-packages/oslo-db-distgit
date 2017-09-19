@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "3a961159_6935a245",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 454
+      },
+      "writtenOn": "2017-09-19T15:16:03Z",
+      "side": 1,
+      "message": "End the doc_guard after the rm -rf line",
+      "revId": "961ad6ded429348bdae1da0aea9ab2ec0d05b7c7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
