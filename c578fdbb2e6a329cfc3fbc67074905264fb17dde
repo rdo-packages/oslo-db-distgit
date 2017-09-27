@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_2a0abfd2",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 3
+      },
+      "lineNbr": 159,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-09-27T07:07:16Z",
+      "side": 1,
+      "message": "This is a comment referring to the next line. So there should be a blank line above it and no blank lines below it.",
+      "range": {
+        "startLine": 159,
+        "startChar": 0,
+        "endLine": 159,
+        "endChar": 21
+      },
+      "revId": "c578fdbb2e6a329cfc3fbc67074905264fb17dde",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
