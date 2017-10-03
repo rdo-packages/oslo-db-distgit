@@ -6,6 +6,10 @@
 %global with_python3 1
 %endif
 
+%global common_desc \
+The OpenStack Oslo database handling library. Provides database connectivity \
+to the different backends and helper utils.
+
 Name:           python-%{pkg_name}
 Version:        XXX
 Release:        XXX
@@ -18,8 +22,7 @@ Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstr
 BuildArch:      noarch
 
 %description
-The OpenStack Oslo database handling library. Provides database connectivity
-to the different backends and helper utils.
+%{common_desc}
 
 %package -n python2-%{pkg_name}
 Summary:        OpenStack oslo.db library
@@ -61,8 +64,7 @@ Requires:       python-debtcollector >= 1.2.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
-The OpenStack Oslo database handling library. Provides database connectivity
-to the different backends and helper utils.
+%{common_desc}
 
 
 %package -n python-%{pkg_name}-doc
@@ -129,8 +131,7 @@ Requires:       python3-debtcollector >= 1.2.0
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python3-%{pkg_name}
-The OpenStack Oslo database handling library. Provides database connectivity
-to the different backends and helper utils.
+%{common_desc}
 %endif
 
 %package  -n python-%{pkg_name}-lang
