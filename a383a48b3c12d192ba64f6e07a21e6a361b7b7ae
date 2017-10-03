@@ -1,0 +1,55 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "fa81d914_04efaab1",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:29:03Z",
+      "side": 1,
+      "message": "needs the common_desc above this line",
+      "revId": "a383a48b3c12d192ba64f6e07a21e6a361b7b7ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_e4f1b696",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:29:03Z",
+      "side": 1,
+      "message": "Needs the common_desc above this line",
+      "revId": "a383a48b3c12d192ba64f6e07a21e6a361b7b7ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "fa81d914_242bceec",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 141,
+      "author": {
+        "id": 424
+      },
+      "writtenOn": "2017-10-03T09:29:03Z",
+      "side": 1,
+      "message": "and here",
+      "revId": "a383a48b3c12d192ba64f6e07a21e6a361b7b7ae",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
