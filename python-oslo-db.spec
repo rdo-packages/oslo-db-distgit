@@ -22,6 +22,9 @@ Source0:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{upstr
 
 BuildArch:      noarch
 
+BuildRequires:  git
+BuildRequires:  openstack-macros
+
 %description
 %{common_desc}
 
@@ -32,7 +35,6 @@ Summary:        OpenStack oslo.db library
 
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
-BuildRequires:  git
 # test requirements
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-config
@@ -119,7 +121,6 @@ BuildRequires:  python3-testscenarios
 BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-context
 BuildRequires:  python3-psycopg2
-BuildRequires:  openstack-macros
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
