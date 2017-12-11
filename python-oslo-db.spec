@@ -33,6 +33,7 @@ Summary:        OpenStack oslo.db library
 BuildRequires:  python2-devel
 BuildRequires:  python-pbr
 BuildRequires:  git
+BuildRequires:  openstack-macros
 # test requirements
 BuildRequires:  python-oslo-utils
 BuildRequires:  python-oslo-config
