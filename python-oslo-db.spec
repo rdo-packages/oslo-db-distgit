@@ -34,36 +34,47 @@ Summary:        OpenStack oslo.db library
 %{?python_provide:%python_provide python2-%{pkg_name}}
 
 BuildRequires:  python2-devel
-BuildRequires:  python-pbr
+BuildRequires:  python2-pbr
 # test requirements
-BuildRequires:  python-oslo-utils
-BuildRequires:  python-oslo-config
-BuildRequires:  python-six
-BuildRequires:  python-alembic
-BuildRequires:  python-fixtures
+BuildRequires:  python2-oslo-utils
+BuildRequires:  python2-oslo-config
+BuildRequires:  python2-six
+BuildRequires:  python2-fixtures
+BuildRequires:  python2-oslotest
+BuildRequires:  python2-oslo-context
+# Required to compile translation files
+BuildRequires:  python2-babel
+%if 0%{?fedora} > 0
+BuildRequires:  python2-migrate
+BuildRequires:  python2-alembic
+BuildRequires:  python2-psycopg2
+BuildRequires:  python2-testresources
+BuildRequires:  python2-testscenarios
+%else
 BuildRequires:  python-migrate
+BuildRequires:  python-alembic
+BuildRequires:  python-psycopg2
 BuildRequires:  python-testresources
 BuildRequires:  python-testscenarios
-BuildRequires:  python-oslotest
-BuildRequires:  python-oslo-context
-BuildRequires:  python-psycopg2
-# Required to compile translation files
-BuildRequires:  python-babel
+%endif
 
 Requires:       MySQL-python
-Requires:       python-PyMySQL
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-utils >= 3.20.0
-Requires:       python-alembic >= 0.8.7
-Requires:       python-babel
-Requires:       python-iso8601
+Requires:       python2-PyMySQL
+Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-i18n >= 3.15.3
+Requires:       python2-oslo-utils >= 3.33.0
+Requires:       python2-six >= 1.10.0
+Requires:       python2-sqlalchemy >= 1.0.10
+Requires:       python2-stevedore >= 1.20.0
+Requires:       python2-pbr
+Requires:       python2-debtcollector >= 1.2.0
+%if 0%{?fedora} > 0
+Requires:       python2-alembic >= 0.8.10
+Requires:       python2-migrate >= 0.11.0
+%else
+Requires:       python-alembic >= 0.8.10
 Requires:       python-migrate >= 0.11.0
-Requires:       python-six >= 1.9.0
-Requires:       python-sqlalchemy >= 1.0.10
-Requires:       python-stevedore >= 1.20.0
-Requires:       python-pbr
-Requires:       python-debtcollector >= 1.2.0
+%endif
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python2-%{pkg_name}
@@ -73,8 +84,8 @@ Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 %package -n python-%{pkg_name}-doc
 Summary:    Documentation for the Oslo database handling library
 
-BuildRequires:  python-sphinx
-BuildRequires:  python-openstackdocstheme
+BuildRequires:  python2-sphinx
+BuildRequires:  python2-openstackdocstheme
 
 %description -n python-%{pkg_name}-doc
 %{common_desc}
@@ -86,16 +97,24 @@ Documentation for the Oslo database handling library.
 Summary:    test subpackage for the Oslo database handling library
 
 Requires:  python-%{pkg_name} = %{version}-%{release}
-Requires:  python-oslo-utils
-Requires:  python-oslo-config
-Requires:  python-six
+Requires:  python2-oslo-utils
+Requires:  python2-oslo-config
+Requires:  python2-six
+Requires:  python2-fixtures
+Requires:  python2-oslotest
+%if 0%{?fedora} > 0
+Requires:  python2-alembic
+Requires:  python2-migrate
+Requires:  python2-psycopg2
+Requires:  python2-testresources
+Requires:  python2-testscenarios
+%else
 Requires:  python-alembic
-Requires:  python-fixtures
 Requires:  python-migrate
+Requires:  python-psycopg2
 Requires:  python-testresources
 Requires:  python-testscenarios
-Requires:  python-oslotest
-Requires:  python-psycopg2
+%endif
 
 %description -n python-%{pkg_name}-tests
 %{common_desc}
@@ -124,14 +143,12 @@ BuildRequires:  python3-psycopg2
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
-Requires:       python3-oslo-config >= 2:4.0.0
-Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-utils >= 3.20.0
+Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-alembic >= 0.8.7
-Requires:       python3-babel
-Requires:       python3-iso8601
 Requires:       python3-migrate >= 0.11.0
-Requires:       python3-six >= 1.9.0
+Requires:       python3-six >= 1.10.0
 Requires:       python3-sqlalchemy >= 1.0.10
 Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-pbr
