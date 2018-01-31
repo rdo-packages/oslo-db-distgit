@@ -52,14 +52,12 @@ BuildRequires:  python-babel
 
 Requires:       MySQL-python
 Requires:       python-PyMySQL
-Requires:       python-oslo-config >= 2:4.0.0
-Requires:       python-oslo-i18n >= 2.1.0
-Requires:       python-oslo-utils >= 3.20.0
-Requires:       python-alembic >= 0.8.7
-Requires:       python-babel
-Requires:       python-iso8601
+Requires:       python-oslo-config >= 2:5.1.0
+Requires:       python-oslo-i18n >= 3.15.3
+Requires:       python-oslo-utils >= 3.33.0
+Requires:       python-alembic >= 0.8.10
 Requires:       python-migrate >= 0.11.0
-Requires:       python-six >= 1.9.0
+Requires:       python-six >= 1.10.0
 Requires:       python-sqlalchemy >= 1.0.10
 Requires:       python-stevedore >= 1.20.0
 Requires:       python-pbr
@@ -124,14 +122,12 @@ BuildRequires:  python3-psycopg2
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
-Requires:       python3-oslo-config >= 2:4.0.0
-Requires:       python3-oslo-i18n >= 2.1.0
-Requires:       python3-oslo-utils >= 3.20.0
+Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-i18n >= 3.15.3
+Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-alembic >= 0.8.7
-Requires:       python3-babel
-Requires:       python3-iso8601
 Requires:       python3-migrate >= 0.11.0
-Requires:       python3-six >= 1.9.0
+Requires:       python3-six >= 1.10.0
 Requires:       python3-sqlalchemy >= 1.0.10
 Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-pbr
