@@ -12,8 +12,8 @@ The OpenStack Oslo database handling library. Provides database connectivity \
 to the different backends and helper utils.
 
 Name:           python-%{pkg_name}
-Version:        XXX
-Release:        XXX
+Version:        4.33.0
+Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
 License:        ASL 2.0
@@ -246,3 +246,6 @@ rm -rf .testrepository
 %endif
 
 %changelog
+* Sat Feb 10 2018 RDO <dev@lists.rdoproject.org> 4.33.0-1
+- Update to 4.33.0
+
