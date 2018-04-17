@@ -33,6 +33,9 @@ Summary:        OpenStack oslo.db library
 
 %{?python_provide:%python_provide python2-%{pkg_name}}
 
+Obsoletes: python-%{pkg_name}-tests < %{version}-%{release}
+Obsoletes: python2-%{pkg_name}-tests < %{version}-%{release}
+
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
 # test requirements
