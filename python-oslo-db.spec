@@ -6,6 +6,8 @@
 %if 0%{?fedora} >= 24
 %global with_python3 1
 %endif
+# guard for rhosp obsoletes
+%global rhosp 0
 
 %global common_desc \
 The OpenStack Oslo database handling library. Provides database connectivity \
@@ -32,6 +34,11 @@ BuildRequires:  openstack-macros
 Summary:        OpenStack oslo.db library
 
 %{?python_provide:%python_provide python2-%{pkg_name}}
+
+%if 0%{rhosp} == 1
+Obsoletes: python-%{pkg_name}-tests < %{version}-%{release}
+Obsoletes: python2-%{pkg_name}-tests < %{version}-%{release}
+%endif
 
 BuildRequires:  python2-devel
 BuildRequires:  python2-pbr
