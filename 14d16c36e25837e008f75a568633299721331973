@@ -46,6 +46,30 @@
       "revId": "14d16c36e25837e008f75a568633299721331973",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "1ab14d0d_485c5725",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2018-04-18T18:15:17Z",
+      "side": 1,
+      "message": "if this is affecting downstream only, could you use osp guard?",
+      "parentUuid": "1ab14d0d_c81aa76e",
+      "range": {
+        "startLine": 37,
+        "startChar": 11,
+        "endLine": 37,
+        "endChar": 37
+      },
+      "revId": "14d16c36e25837e008f75a568633299721331973",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
