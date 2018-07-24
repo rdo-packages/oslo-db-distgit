@@ -67,7 +67,7 @@ BuildRequires:  python-testscenarios
 
 Requires:       MySQL-python
 Requires:       python2-PyMySQL
-Requires:       python2-oslo-config >= 2:5.1.0
+Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-i18n >= 3.15.3
 Requires:       python2-oslo-utils >= 3.33.0
 Requires:       python2-six >= 1.10.0
@@ -76,10 +76,10 @@ Requires:       python2-stevedore >= 1.20.0
 Requires:       python2-pbr
 Requires:       python2-debtcollector >= 1.2.0
 %if 0%{?fedora} > 0
-Requires:       python2-alembic >= 0.8.10
+Requires:       python2-alembic >= 0.9.6
 Requires:       python2-migrate >= 0.11.0
 %else
-Requires:       python-alembic >= 0.8.10
+Requires:       python-alembic >= 0.9.6
 Requires:       python-migrate >= 0.11.0
 %endif
 Requires:       python-%{pkg_name}-lang = %{version}-%{release}
@@ -151,10 +151,10 @@ BuildRequires:  python3-psycopg2
 
 Requires:       MySQL-python3
 Requires:       python3-PyMySQL
-Requires:       python3-oslo-config >= 2:5.1.0
+Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-utils >= 3.33.0
-Requires:       python3-alembic >= 0.8.7
+Requires:       python3-alembic >= 0.9.6
 Requires:       python3-migrate >= 0.11.0
 Requires:       python3-six >= 1.10.0
 Requires:       python3-sqlalchemy >= 1.0.10
