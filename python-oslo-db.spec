@@ -165,6 +165,27 @@ Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 
 %description -n python3-%{pkg_name}
 %{common_desc}
+
+%package -n python3-%{pkg_name}-tests
+Summary:    test subpackage for the Oslo database handling library
+%{?python_provide:%python_provide python3-%{pkg_name}-tests}
+
+Requires:  python3-%{pkg_name} = %{version}-%{release}
+Requires:  python3-oslo-utils
+Requires:  python3-oslo-config
+Requires:  python3-six
+Requires:  python3-fixtures
+Requires:  python3-oslotest
+Requires:  python3-alembic
+Requires:  python3-migrate
+Requires:  python3-psycopg2
+Requires:  python3-testresources
+Requires:  python3-testscenarios
+
+%description -n python3-%{pkg_name}-tests
+%{common_desc}
+
+Test subpackage for the Oslo database handling library.
 %endif
 
 %package  -n python-%{pkg_name}-lang
@@ -250,6 +271,9 @@ rm -rf .testrepository
 %{python3_sitelib}/oslo_db
 %{python3_sitelib}/*.egg-info
 %exclude %{python3_sitelib}/oslo_db/tests
+
+%files -n python2-%{pkg_name}-tests
+%{python3_sitelib}/oslo_db/tests
 %endif
 
 %changelog
