@@ -272,7 +272,7 @@ rm -rf .testrepository
 %{python3_sitelib}/*.egg-info
 %exclude %{python3_sitelib}/oslo_db/tests
 
-%files -n python2-%{pkg_name}-tests
+%files -n python3-%{pkg_name}-tests
 %{python3_sitelib}/oslo_db/tests
 %endif
 
