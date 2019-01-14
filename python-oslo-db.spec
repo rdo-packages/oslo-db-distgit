@@ -3,7 +3,7 @@
 %global pypi_name oslo.db
 %global pkg_name oslo-db
 
-%if 0%{?fedora} >= 24
+%if 0%{?fedora} >= 24 || 0%{?rhel} > 7
 %global with_python3 1
 %endif
 # guard for rhosp obsoletes
@@ -51,7 +51,7 @@ BuildRequires:  python2-oslotest
 BuildRequires:  python2-oslo-context
 # Required to compile translation files
 BuildRequires:  python2-babel
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 BuildRequires:  python2-migrate
 BuildRequires:  python2-alembic
 BuildRequires:  python2-psycopg2
@@ -75,7 +75,7 @@ Requires:       python2-sqlalchemy >= 1.0.10
 Requires:       python2-stevedore >= 1.20.0
 Requires:       python2-pbr
 Requires:       python2-debtcollector >= 1.2.0
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 Requires:       python2-alembic >= 0.9.6
 Requires:       python2-migrate >= 0.11.0
 %else
@@ -110,7 +110,7 @@ Requires:  python2-oslo-config
 Requires:  python2-six
 Requires:  python2-fixtures
 Requires:  python2-oslotest
-%if 0%{?fedora} > 0
+%if 0%{?fedora} || 0%{?rhel} > 7
 Requires:  python2-alembic
 Requires:  python2-migrate
 Requires:  python2-psycopg2
