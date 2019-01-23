@@ -65,7 +65,6 @@ BuildRequires:  python-testresources
 BuildRequires:  python-testscenarios
 %endif
 
-Requires:       MySQL-python
 Requires:       python2-PyMySQL
 Requires:       python2-oslo-config >= 2:5.2.0
 Requires:       python2-oslo-i18n >= 3.15.3
@@ -149,7 +148,6 @@ BuildRequires:  python3-oslotest
 BuildRequires:  python3-oslo-context
 BuildRequires:  python3-psycopg2
 
-Requires:       MySQL-python3
 Requires:       python3-PyMySQL
 Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-i18n >= 3.15.3
