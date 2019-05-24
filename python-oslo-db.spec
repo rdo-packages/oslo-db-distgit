@@ -91,6 +91,7 @@ Requires:       python-%{pkg_name}-lang = %{version}-%{release}
 Summary:    Documentation for the Oslo database handling library
 
 BuildRequires:  python2-sphinx
+BuildRequires:  python2-sphinxcontrib-apidoc
 BuildRequires:  python2-openstackdocstheme
 
 %description -n python-%{pkg_name}-doc
