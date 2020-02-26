@@ -202,3 +202,4 @@ mv %{buildroot}%{pyver_sitelib}/oslo_db/locale %{buildroot}%{_datadir}/locale
 %license LICENSE
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/oslo.db/commit/?id=bf5b45ebba24b4c8737c3197f2cd65f84fd2448c
