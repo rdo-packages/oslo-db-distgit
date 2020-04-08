@@ -79,8 +79,7 @@ Requires:       python%{pyver}-PyMySQL
 Requires:       python%{pyver}-oslo-config >= 2:5.2.0
 Requires:       python%{pyver}-oslo-i18n >= 3.15.3
 Requires:       python%{pyver}-oslo-utils >= 3.33.0
-Requires:       python%{pyver}-six >= 1.10.0
-Requires:       python%{pyver}-sqlalchemy >= 1.0.10
+Requires:       python%{pyver}-sqlalchemy >= 1.2.0
 Requires:       python%{pyver}-stevedore >= 1.20.0
 Requires:       python%{pyver}-pbr
 Requires:       python%{pyver}-debtcollector >= 1.2.0
@@ -117,7 +116,6 @@ Summary:    test subpackage for the Oslo database handling library
 Requires:  python%{pyver}-%{pkg_name} = %{version}-%{release}
 Requires:  python%{pyver}-oslo-utils
 Requires:  python%{pyver}-oslo-config
-Requires:  python%{pyver}-six
 Requires:  python%{pyver}-fixtures
 Requires:  python%{pyver}-oslotest
 # Handle python2 exception
