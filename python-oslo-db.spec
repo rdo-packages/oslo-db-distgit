@@ -128,7 +128,7 @@ rm -rf doc/build/html/.{doctrees,buildinfo}
 %endif
 
 # Generate i18n files
-python3 setup.py compile_catalog -d build/lib/oslo_db/locale
+python3 setup.py compile_catalog -d build/lib/oslo_db/locale --domain oslo_db
 
 %install
 %{py3_install}
