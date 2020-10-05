@@ -56,6 +56,7 @@ BuildRequires:  python3-testresources
 BuildRequires:  python3-testscenarios
 
 Requires:       python3-PyMySQL
+Requires:       python3-pynacl
 Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-utils >= 3.33.0
