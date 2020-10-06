@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7234514e_5496fc4a",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 59,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2020-10-06T07:13:20Z",
+      "side": 1,
+      "message": "It seems more suited to PyMySQL as extra require specified:- https://github.com/PyMySQL/PyMySQL/blob/v0.10.0/setup.py#L22.\nThough PyMySQL is in rhel so changes need to be there ideally like adding a dep or adding an extra sub package for the feature so it can be utilized only where needed. May be it\u0027s already proposed there? and here it\u0027s being added temporary?\n\n\nAdding it here may lead to removal of it in future requirement syncs as oslo.db do not mention it explicitly in https://github.com/openstack/oslo.db/blob/master/requirements.txt",
+      "range": {
+        "startLine": 59,
+        "startChar": 0,
+        "endLine": 59,
+        "endChar": 30
+      },
+      "revId": "558e45d7fed4bfc09fa8e6acebdf12fdfbb8414d",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    }
+  ]
+}
