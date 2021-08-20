@@ -187,3 +187,4 @@ python3 setup.py test
 * Thu Sep 17 2020 RDO <dev@lists.rdoproject.org> 8.4.0-1
 - Update to 8.4.0
 
+# REMOVEME: error caused by commit https://opendev.org/openstack/oslo.db/commit/81e55722dc83744c7cc5fc6a062248843519db69
