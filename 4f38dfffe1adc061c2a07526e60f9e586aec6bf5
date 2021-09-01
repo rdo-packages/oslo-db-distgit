@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "27b2d266_85550b05",
+        "filename": "python-oslo-db.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 403
+      },
+      "writtenOn": "2021-09-01T05:48:05Z",
+      "side": 1,
+      "message": "python-sqlalchemy - 1.4.0 in c9 have issue with greenlet version in c9, greenlet\u003e\u003d1.0 is needed by sqlalchemy-1.4.x.",
+      "range": {
+        "startLine": 75,
+        "startChar": 16,
+        "endLine": 75,
+        "endChar": 43
+      },
+      "revId": "4f38dfffe1adc061c2a07526e60f9e586aec6bf5",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": true
+    }
+  ]
+}
