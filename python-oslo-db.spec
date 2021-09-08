@@ -12,7 +12,7 @@ The OpenStack Oslo database handling library. Provides database connectivity \
 to the different backends and helper utils.
 
 Name:           python-%{pkg_name}
-Version:        8.1.0
+Version:        8.1.1
 Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
@@ -165,6 +165,9 @@ python3 setup.py test
 %license LICENSE
 
 %changelog
+* Wed Sep 08 2021 RDO <dev@lists.rdoproject.org> 8.1.1-1
+- Update to 8.1.1
+
 * Thu Apr 23 2020 RDO <dev@lists.rdoproject.org> 8.1.0-1
 - Update to 8.1.0
 
