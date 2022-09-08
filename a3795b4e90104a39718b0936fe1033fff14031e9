@@ -1,0 +1,9 @@
+Code-Review+1: Damien Ciabrini <damien.ciabrini@gmail.com>
+Code-Review+2: Joel Capitao <jcapitao@redhat.com>
+Workflow+1: Joel Capitao <jcapitao@redhat.com>
+Verified+2: Zuul CI <zuul@review.rdoproject.org>
+Submitted-by: Zuul CI <zuul@review.rdoproject.org>
+Submitted-at: Thu, 08 Sep 2022 14:09:18 +0000
+Reviewed-on: https://review.rdoproject.org/r/c/openstack/oslo-db-distgit/+/41537
+Project: openstack/oslo-db-distgit
+Branch: refs/heads/rpm-master
