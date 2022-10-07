@@ -75,6 +75,7 @@ Requires:       python3-oslo-config >= 2:5.2.0
 Requires:       python3-oslo-i18n >= 3.15.3
 Requires:       python3-oslo-utils >= 3.33.0
 Requires:       python3-sqlalchemy >= 1.2.0
+Requires:       python3-sqlalchemy < 1.4.0
 Requires:       python3-stevedore >= 1.20.0
 Requires:       python3-pbr
 Requires:       python3-debtcollector >= 1.2.0
