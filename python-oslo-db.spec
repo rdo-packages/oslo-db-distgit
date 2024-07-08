@@ -164,6 +164,9 @@ mv %{buildroot}%{python3_sitelib}/oslo_db/locale %{buildroot}%{_datadir}/locale
 %find_lang oslo_db --all-name
 
 %check
+# Disable sqlalchemy 2.0 checks until we promote sqlalchemy > 2.0
+export SQLALCHEMY_WARN_20=0
+export SQLALCHEMY_SILENCE_UBER_WARNING=1
 %tox -e %{default_toxenv}
 
 %pyproject_extras_subpkg -n python3-%{pkg_name} mysql
