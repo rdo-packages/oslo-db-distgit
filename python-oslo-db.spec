@@ -33,9 +33,6 @@ Source101:        https://tarballs.openstack.org/%{pypi_name}/%{pypi_name}-%{ups
 Source102:        https://releases.openstack.org/_static/%{sources_gpg_sign}.txt
 %endif
 
-# TODO (amoralej) Disable sqlalchemy 2.0 checks until we promote sqlalchemy > 2.0
-Patch0:          0001-Disable-warnings-on-sqlalchemy-2.0-in-tests.patch
-
 BuildArch:      noarch
 
 # Required for tarball sources verification
