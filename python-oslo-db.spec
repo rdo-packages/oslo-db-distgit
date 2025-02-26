@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x815AFEC729392386480E076DCC0DFE2D21C023C9
+%global sources_gpg_sign 0x22284f69d9eccdf3df7819791c711af193ff8e54
 
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 # we are excluding some BRs from automatic generator
@@ -20,7 +20,7 @@ The OpenStack Oslo database handling library. Provides database connectivity \
 to the different backends and helper utils.
 
 Name:           python-%{pkg_name}
-Version:        14.1.0
+Version:        14.1.1
 Release:        1%{?dist}
 Summary:        OpenStack oslo.db library
 
@@ -188,6 +188,9 @@ mv %{buildroot}%{python3_sitelib}/oslo_db/locale %{buildroot}%{_datadir}/locale
 %license LICENSE
 
 %changelog
+* Wed Feb 26 2025 RDO <dev@lists.rdoproject.org> 14.1.1-1
+- Update to 14.1.1
+
 * Wed Sep 27 2023 RDO <dev@lists.rdoproject.org> 14.1.0-1
 - Update to 14.1.0
 
